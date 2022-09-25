@@ -1,6 +1,6 @@
 <div align="center">
 
-# EMLO 2.0 Assignment 2
+# EMLO 2.0 Assignment 3
 
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 <a href="https://pytorchlightning.ai/"><img alt="Lightning" src="https://img.shields.io/badge/-Lightning-792ee5?logo=pytorchlightning&logoColor=white"></a>
@@ -13,7 +13,7 @@
 
 ## Description
 
-This project uses timm models to train and evaluate on MNIST and CIFAR10 datasets. Docker support has been added on top of it.
+In this assignment, we add DVC support to the repo, and conduct hyperparameter sweep using optuna.
 
 ## How to run
 
@@ -55,6 +55,12 @@ You can override any parameter from command line like this
 
 ```bash
 python src/train.py trainer.max_epochs=20 datamodule.batch_size=64
+```
+
+You can test it on any combination of hyperparameters 
+
+```bash
+python src/train.py -m hparams_search=cifar_optuna experiment=cifar
 ```
 
 ## Docker Support
